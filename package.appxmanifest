@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package 
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" 
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4" 
+  IgnorableNamespaces="uap mp">
+  <Identity Name="Khufu-I.uwp-cmake" Publisher="CN=CMake" Version="0.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="B870100A-0ED5-3460-8982-34D7D5633EFA" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <Properties>
+    <DisplayName>UWP CMake</DisplayName>
+    <PublisherDisplayName>Khufu_I</PublisherDisplayName>
+    <Logo>assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application 
+      Id="App" 
+      Executable="uwp-cmake.exe"
+      EntryPoint="uwp-cmake.App"
+      desktop4:SupportsMultipleInstances="true">
+      <uap:VisualElements
+        DisplayName="UWP CMake"
+        Description="Basic C++/UWP CMake app using CMake"
+        BackgroundColor="transparent"
+        Square150x150Logo="assets\Square150x150Logo.png"
+        Square44x44Logo="assets\Square44x44Logo.png">
+        <uap:SplashScreen Image="assets\SplashScreen.png" uap5:Optional="true"  BackgroundColor="black"/>
+        <uap:DefaultTile 
+          ShortName="UWP CMake" 
+          Wide310x150Logo="assets\Wide310x150Logo.png" 
+          Square71x71Logo="assets\SmallTile.png" 
+          Square310x310Logo="assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+</Package>
