@@ -1,7 +1,6 @@
 set(ASSET_FILES
   assets/LargeTile.scale-100.png
   assets/LargeTile.scale-200.png
-  assets/PDFIcon.pdf
   assets/SmallTile.scale-100.png
   assets/SmallTile.scale-200.png
   assets/SplashScreen.scale-100.png

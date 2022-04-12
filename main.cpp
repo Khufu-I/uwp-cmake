@@ -21,8 +21,6 @@ struct App : ApplicationT<App> {
     output.Text(outputString(m_text));
     output.Style(
         Resources().TryLookup(box_value(L"HeaderTextBlockStyle")).as<Style>());
-    // output.Foreground(SolidColorBrush(
-    //     Resources().TryLookup(box_value(L"SystemAccentColor")).as<Color>()));
     output.TextAlignment(TextAlignment::Center);
     output.TextWrapping(TextWrapping::WrapWholeWords);
 
@@ -40,6 +38,7 @@ struct App : ApplicationT<App> {
     vStack.Children().Append(input);
     vStack.Children().Append(output);
 
+    // Refresh button only shown in Debug mode
 #ifdef _DEBUG
     Button refreshButton;
     refreshButton.Content(box_value(L"Refresh"));
