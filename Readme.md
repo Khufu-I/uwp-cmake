@@ -18,7 +18,7 @@ cmake . -Bbuild
 ```
 
 #### Visual Studio
-Open **uwp-cmake.sln** Visual Studio solution in the build folder. Press **F5** to build and run the project.
+Open **uwp-cmake.sln** Visual Studio solution in the **build** folder. Press F5 to build and run the project.
 
 #### CMake
 Using Visual Studio command prompt execute 
