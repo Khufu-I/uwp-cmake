@@ -53,7 +53,10 @@ void App::render() {
   vStack.Children().Append(refreshButton);
 #endif
 
-  Window::Current().Content(vStack);
+  ScrollViewer scrollView;
+  scrollView.Content(vStack);
+
+  Window::Current().Content(scrollView);
 }
 
 void App::OnLaunched(LaunchActivatedEventArgs const&) {
