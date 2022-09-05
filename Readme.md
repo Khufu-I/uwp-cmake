@@ -1,12 +1,12 @@
-# C++/UWP CMake app using CMake
-Basic example using standard C++ and CMake to build an UWP app using the Windows 11 or 10 SDK. This sample app uses Windows UI controls which come with the Windows SDK instead of WinUI controls which are distributed via Nuget. This sample app doesn't use XAML files or the cppwinrt generators to simplify coding and build steps. This project aspires to code UI using simple C++ in the [fluent-style pattern](https://github.com/microsoft/cppwinrt/pull/1114).
+# C++ UWP app using CMake
+Basic example using standard C++ 20 and CMake to build a UWP app using the Windows 11 SDK. This sample app uses UI controls which come with the Windows SDK instead of WinUI controls which are distributed via Nuget. This sample app doesn't use XAML to simplify coding and build steps. This project aspires to code UI using simple C++ in the [fluent-style pattern](https://github.com/microsoft/cppwinrt/pull/1114).
 
 ## Getting started
 
 ### Prerequisites
-Downldoad the latest [Visual Studio](https://www.visualstudio.com/) and follow the setup. The following components are required:
+Windows 10 or higher. Downldoad the latest [Visual Studio](https://www.visualstudio.com/) and follow the setup. The following components are required:
 * Universal Windows Platform development
-* Windows 11 SDK
+* Windows 11 SDK (C++/WinRT in Windows 10 SDK doesn't support C++20)
 * C++ (v143) Universal Windows Platform Tools
 * C++ CMake tools for Windows
 
@@ -23,8 +23,6 @@ Open **uwp-cmake.sln** Visual Studio solution in the build folder. Press **F5** 
 #### CMake
 Using Visual Studio command prompt execute 
 ```batch
-:: Generate Visual Studio project files
-cmake . -Bbuild
 :: Build project
 cmake --build build
 :: Install UWP app
